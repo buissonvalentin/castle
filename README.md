@@ -1,3 +1,15 @@
+
+
+
+
+#Pour lancer le projet : lancer le script app.js puis ouvrir une page web a l'address : 'localhost:8080', le projet utilise une websocket pour transférer les données.
+
+
+
+
+
+
+
 # Castle
 
 > Sleep well with Relais & Châteaux
