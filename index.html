@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"   
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Voyageur</title>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body style="height : 100%; margin: 0px; padding: 0px; font-size:large">
+
+    <div class="row" style="height : 100%; padding: 0px; margin: 0px;">
+        <div class="col-lg-4 text-center" style="background-color : #fff; height: 100%; padding: 0px; margin: 0px;">
+            <div style="margin: 0px; width : 100%; height : 20%">
+                <h1 style="font-family : verdana; font-weight : bold">Voyageur</h1>
+                <br>
+
+                <form class="pull-left" style="margin-left : 10px">
+                    Date Sejour :
+                    <input id="datePicker" type="date" min='2019-02-14' max='2019-12-30'>
+                    <span id='validDateIcon' class="glyphicon glyphicon-ok text-success collapse"></span>
+                    <span id='wrongDateIcon' class="glyphicon glyphicon-remove text-danger" data-toggle="tooltip"
+                        data-placement="right" title="Vous devez choisir un samedi"></span>
+                </form>
+                <div class="dropdown pull-right" style="margin-right : 10px;">
+                    <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Trier par
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <div class="dropdown-item" value='1'>Nom</div>
+                        <div class="dropdown-item" value='2'>Etoiles</div>
+                        <div class="dropdown-item" value='3'>Prix</div>
+                    </div>
+                </div>
+            </div>
+            <div id='resultContainer' class="text-center" style="overflow-y: scroll; margin: 0px;   width : 100%; height : 75%; background-color: #eee;">
+            </div>
+        </div>
+
+        <div class="col-lg-8" style="height : 100%; padding: 0px; margin: 0px;">
+            <div style="background-image : url('http://localhost:8080/image/bg3.jpg'); width : 100%; height : 100%; background-repeat: no-repeat; background-size: cover;">
+
+                <div id='detail' style="width : 70%; margin : auto; height : 100%; padding-top: 2%;">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

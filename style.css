@@ -1,0 +1,10 @@
+body, html {
+    height: 100%;
+    padding: 0;
+   }
+
+.crd:hover{
+    box-shadow: 0 0 5px rgba(255, 193, 7, 1);
+    border: 1px solid rgba(255, 193, 7, 1);
+    cursor: pointer;
+ }
