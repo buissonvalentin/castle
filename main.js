@@ -2,12 +2,10 @@ $('document').ready(function () {
     
     var listAvailableRoomAtDate = [];
     var allData = null;
-    var socket = io.connect("http://localhost:8080");
+    
 
-    socket.on('data', function (data) {
-        allData = data;
-        console.log("data received");
-        console.log(allData);
+    $.getJSON("data.json", function(json) {
+        allData = json;
     });
 
     $("#datePicker").on('change', function (dateText, inst) {
